@@ -1,0 +1,8 @@
+Encrypt:
+openssl idea-ofb -e -in image2.jpg -out ideaofb.enc -p
+
+Decrypt:
+
+
+openssl idea-cbc -d -in encrypted_idea-cbc.enc -out image1.jpg -p
+

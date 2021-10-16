@@ -1,0 +1,9 @@
+To decrypt the binary data with camellia use:
+
+    openssl camellia-192-cbc -d -in camellia192cbc.enc -out image1.jpg -p
+
+To encrypt the image to camellia use:
+
+
+    openssl camellia-256-cbc -e -in camellia-256-cbc.jpg -out camellia256cbc.enc -p
+

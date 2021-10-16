@@ -1,0 +1,7 @@
+Encrypt:
+
+openssl cast5-ofb -e -in image1.jpg -out cast5ofb.enc -p
+
+Decrypt:
+
+openssl cast5-cbc -d -in encrypted_cast5-cbc.enc -out image1.jpg -p

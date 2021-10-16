@@ -1,0 +1,4 @@
+To decrypt the .enc file using blowfish use the following command:
+
+
+    

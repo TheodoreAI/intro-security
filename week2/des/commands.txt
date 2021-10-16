@@ -1,0 +1,7 @@
+Encrypt:
+
+openssl des-ofb -e -in plaintext2.txt -out desofb.enc -p 
+
+Decrypt:
+
+openssl des-ede -d -in encrypted-2.enc -out plaintext1.txt -p

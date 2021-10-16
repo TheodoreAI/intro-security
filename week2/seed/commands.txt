@@ -1,0 +1,9 @@
+Encrypt:
+
+openssl seed-ofb -e -in plaintext1.txt -out seedofb.enc -p
+
+Decrypt:
+
+openssl seed-cbc -d -in encryptedSeed-cbc.enc -out plaintext.txt -p
+
+

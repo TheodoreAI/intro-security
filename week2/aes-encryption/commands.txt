@@ -1,0 +1,21 @@
+Decryption:
+
+For AES use the following command: it seems like the code has to be decoded because at first it will be in base64.
+
+    openssl aes-192-ecb -md md5 -in aes192ecb.enc -out aes_output.txt -base64
+
+
+Then use:
+
+    openssl aes-192-ecb -d -in aes192ecb.enc -out aes_output.txt
+
+Encryption/Decryption of mine:
+
+    ENC: (-p gives you the key, iv, salt)
+    openssl aes-256-cbc -in plaintext.txt -out aes256cbc.enc -p
+    DEC:
+    openssl aes-256-cbc -d -in aes256cbc.enc -out plaintext2.txt
+
+
+
+

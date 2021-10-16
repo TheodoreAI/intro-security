@@ -1,0 +1,7 @@
+Encrypt:
+
+openssl rc5-ecb -e -in plaintext1.txt -out rc5ecb.enc -p
+
+Decrypt:
+
+openssl rc5-ofb -d -in ciphertext_rc5-ofb.enc -out plaintext.txt -p
