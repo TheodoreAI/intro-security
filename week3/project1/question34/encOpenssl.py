@@ -105,14 +105,11 @@ Main function that executes everything
 """
 def main():
     key_word_method_1 = open_words()
-    print(key_word_method_1)
+    print("Test method 1 (word):", key_word_method_1)
     key_word_method_2 = open_plaintext_words('8d20e5056a8d24d0462ce74e4904c1b513e10d1df4a2ef2ad4540fae1ca0aaf9')
-    print(key_word_method_2)
+    print("Test method 2 (word):", key_word_method_2)
 
 main()
-
-
-
 
 
 # This is going to check every possible word from the list and once 

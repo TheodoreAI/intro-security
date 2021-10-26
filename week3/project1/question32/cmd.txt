@@ -2,23 +2,23 @@ The following are the commands needed to make this happen:
 
 
 # Encrypt each with ECB
-openssl des-ecb     -e -in image.bmp -out image.ecb.bmp -K 1
+openssl des-ecb     -e -in Penguin.bmp -out Penguin.ecb.bmp -K 1
 
 # Encrypt each with CBC
-openssl aes-128-cbc -e -in image.bmp -out image.cbc.bmp -K 1 -iv 1
+openssl aes-128-cbc -e -in Penguin.bmp -out Penguin.cbc.bmp -K 1 -iv 1
 
-# making sure we can decrypt the images and that they are accruate
+# making sure we can decrypt the Penguins and that they are accruate
 
-cp -nf image.ecb.bmp image.ecb.updated.bmp
-cp -nf image.cbc.bmp image.cbc.updated.bmp
+cp -nf Penguin.ecb.bmp Penguin.ecb.updated.bmp
+cp -nf Penguin.cbc.bmp Penguin.cbc.updated.bmp
 
 # We will now grab the original header and place it in the encrypted files:
 
-dd bs=1 count=54 if=image.bmp of=image.ecb.updated.bmp conv=notrunc
-dd bs=1 count=54 if=image.bmp of=image.cbc.updated.bmp conv=notrunc
+dd bs=1 count=54 if=Penguin.bmp of=Penguin.ecb.updated.bmp conv=notrunc
+dd bs=1 count=54 if=Penguin.bmp of=Penguin.cbc.updated.bmp conv=notrunc
 
-# Create file of all 0's - size based on image.bmp
+# Create file of all 0's - size based on Penguin.bmp
 dd bs=1 count=1736814 if=/dev/zero of=output.dat
 
 # Copy the 54 byte BMP header
-dd bs=1 count=54 if=image.bmp of=output.dat conv=notrunc
+dd bs=1 count=54 if=Penguin.bmp of=output.dat conv=notrunc
