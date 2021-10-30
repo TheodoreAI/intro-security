@@ -1,0 +1,16 @@
+Observations and comments on the Bloom Filter:
+
+I made this Bloom Filter so I can reuse it on an application 
+that will let the user know if the password they are inputting is likely 
+to be in a dictionary file or has been exposed before. 
+
+I noticed that the lower the false positive probability (p << 0.5), the bigger the bit size array had to be. 
+I think that in order for the low false positive property to remain, the bit size array has to increase proportionally.
+I also noticed that when I use a dictionary list to insert into the Bloom Filter, the false positive outcomes depends on the size. 
+I could not gather what the relationship was from just this, I think I would need to run more tests, but 
+for the purposes of this assignment this should suffice. 
+
+The bloom filter meets the following:
+
+1. It does not report False Negatives
+2. For the sample_input.txt it does not yield all maybes when the dictionary.txt is used as the data source to compare to.

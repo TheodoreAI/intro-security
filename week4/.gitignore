@@ -2,3 +2,6 @@ env
 sample_output.txt
 __pycache__
 output.txt
+test_pass.py
+task.py
+test_passwords.txt

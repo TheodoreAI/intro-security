@@ -30,9 +30,12 @@ def sample_output(bf, filename):
     words = get_words_txt(filename)
     # open a file and dump the outcomes
     sample_txt = open("output.txt", "w")
+    # Print the parameters
+    print("Size of bit array: {}".format(bf.size))
+    print("False positive Probability: {}".format(bf.fb_prob))
+    print("Number of hash functions: {}".format(bf.num_hashs))
     for i in range(0, len(words)):
         if bf.check(words[i]):
-           
             sample_txt.write('maybe \n')
         else:
             sample_txt.write('no \n')
@@ -64,7 +67,7 @@ def main():
     # The number of items to add
     n = len(words)
     # False positive probability
-    p = 0.10
+    p = 0.001
     bf = BloomFilter(n, p)
     # Add the words into the BloomFilter object
     for word in words:
@@ -75,7 +78,7 @@ def main():
         print_statements(bf, words)
     else:
         # Sample output of passwords that are checked against the dictionary list
-        sample_output(bf, "sample_input.txt")
+        sample_output(bf, "dictionary.txt")
 
 
 if __name__=='__main__':
